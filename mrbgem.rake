@@ -4,7 +4,7 @@ MRuby::Gem::Specification.new('mruby-uv') do |spec|
   spec.summary = 'libuv mruby binding'
   spec.add_dependency 'mruby-time'
   spec.add_dependency 'mruby-sprintf'
-
+=begin
   is_cross = build.kind_of? MRuby::CrossBuild
 
   if not is_cross and ENV['OS'] == 'Windows_NT'
@@ -81,4 +81,5 @@ MRuby::Gem::Specification.new('mruby-uv') do |spec|
   Dir.glob("#{dir}/src/*.c") { |f| file f => libuv_lib }
   spec.cc.include_paths << "#{libuv_dir}/include"
   spec.linker.library_paths << File.dirname(libuv_lib)
+=end
 end
